@@ -8,7 +8,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        lightSilver: '#D3D3D3',
+        deepBlue : '#0E2442',
+        tomato: '#ff6347',
       },
     },
   },

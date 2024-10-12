@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className='flex flex-col items-center'>
-      <Header />
+      <Header/>
       <Main />
       <Footer />
     </div>

@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <>
-        <div className='border-2 border-white mt-14 w-[75%] flex justify-between'>
+        <div className='border-2 h-[550px] border-white text-white mt-14 w-[75%] flex justify-between'>
             <div>
                 <h3>Resume</h3>
                 <button>View my more</button>
