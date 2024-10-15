@@ -12,36 +12,39 @@ export default function Skills() {
         <h2 className='text-3xl text-center mb-5'>Skills</h2>
 
         <div className='flex justify-around mb-32 w-full'>
-          <div className='flex flex-col items-center'>
-            <div className='border-2 border-gray-300 rounded-full h-52 w-52 flex justify-center items-center'>
-              <div className='border-2 border-gray-300 rounded-full h-44 w-44 flex justify-center items-center'>
-                <SiHtml5 className='text-6xl text-orange-400' />
+          {[
+            {icon: <SiHtml5/>, name: 'HTML' , color: 'text-orange-400'  },
+            {icon: <FaCss3/>, name: 'CSS', color: 'text-blue-400'},
+            {icon: <RiTailwindCssFill/>, name: 'Tailwind',  color: 'text-teal-400'}
+          ].map((item, index) => (
+              <div key={index} className='flex flex-col items-center'>
+                  <div className='border-2 border-gray-300 rounded-full h-52 w-52 flex justify-center items-center'>
+                    <div className='border-2 border-gray-300 rounded-full h-44 w-44 flex justify-center items-center'>
+                      <p className={`text-6xl ${item.color}`}>{item.icon}</p>
+                    </div>
+                  </div>
+                <h3 className='text-xl mt-3'>{item.name}</h3>
               </div>
-            </div>
-            <h3 className='text-xl mt-3'>HTML</h3>
-          </div>
-
-          <div className='flex flex-col items-center'>
-            <div className='border-2 border-gray-300 rounded-full h-52 w-52 flex justify-center items-center'>
-              <div className='border-2 border-gray-300 rounded-full h-44 w-44 flex justify-center items-center'>
-                <FaCss3 className='text-6xl text-blue-400' />
-              </div>
-            </div>
-            <h3 className='text-xl mt-3'>CSS</h3>
-          </div>
-
-          <div className='flex flex-col items-center'>
-            <div className='border-2 border-gray-300 rounded-full h-52 w-52 flex justify-center items-center'>
-              <div className='border-2 border-gray-300 rounded-full h-44 w-44 flex justify-center items-center'>
-                <RiTailwindCssFill className='text-6xl text-teal-400' />
-              </div>
-            </div>
-            <h3 className='text-xl mt-3'>Tailwind</h3>
-          </div>
+          ))}
         </div>
 
-        <div className='flex mt-[-100px] mb-32 w-2/4'>
-          <div className='flex flex-col items-center'>
+        <div className='flex justify-evenly mt-[-100px] mb-32 w-4/5'>
+          {[
+              {icon: <SiJavascript/>, name: 'JavaScript', color: 'text-yellow-400', background: 'bg-jsBlack' },
+              {icon: <FaReact/>, name: 'React', color:'text-sky-400'},
+            ].map((item, index) => (
+                <div key={index} className='flex flex-col items-center'>
+                    <div className='border-2 border-gray-300 rounded-full h-52 w-52 flex justify-center items-center'>
+                      <div className='border-2 border-gray-300 rounded-full h-44 w-44 flex justify-center items-center'>
+                        <p className={`text-6xl ${item.color} ${item.background}`}>{item.icon}</p>
+                      </div>
+                    </div>
+                  <h3 className='text-xl mt-3'>{item.name}</h3>
+                </div>
+            ))}
+
+
+          {/* <div className='flex flex-col items-center'>
               <div className='border-2 border-gray-300 rounded-full h-52 w-52 flex justify-center items-center'>
                 <div className='border-2 border-gray-300 rounded-full h-44 w-44 flex justify-center items-center'>
                   <SiJavascript className='text-6xl text-yellow-400 bg-black' />
@@ -57,7 +60,7 @@ export default function Skills() {
                 </div>
               </div>
               <h3 className='text-xl mt-3'>React</h3>
-            </div>
+            </div> */}
         </div>
 
     </div>

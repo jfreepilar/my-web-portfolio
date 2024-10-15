@@ -7,6 +7,7 @@ export default function Certificate() {
         <p className='text-xl mt-6'>Web Dev Pro: HTML + CSS, Javascript, and React</p>
 
         <p className='text-xl mt-4 leading-relaxed'>In this course, I learned how to build modern, responsive websites using HTML, CSS, and JavaScript. I created interactive layouts, styled web pages, and made sure they looked good on all devices. I also worked with tools like React and Git, and integrated external data using APIs. This course gave me the skills to create clean, user-friendly web experiences.</p>
+        
         <div className='w-full flex justify-center my-9'>
             <a href='/assets/Joeffrey Pilar_WDPBatch2_Certificate_of_Completion_2024.pdf (1) (1).png'
             target='_blank'
