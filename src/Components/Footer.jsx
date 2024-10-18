@@ -9,7 +9,6 @@ export default function Footer() {
 
   const icons = [
     {icon: <FaFacebookSquare />, link: 'https://www.facebook.com/pilarjoeffrey'},
-    {icon: <BsInstagram />, link: 'https://www.instagram.com/joeffreyplr/'},
     {icon: <BsLinkedin /> , link:'https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile'},
     {icon: <IoLogoGithub />, link: 'https://github.com/jfreepilar'}
     ];
@@ -17,33 +16,36 @@ export default function Footer() {
 
   return (
     <>
-        <div className='h-[250px] text-white flex flex-col items-center'>
-            <h2 className='text-3xl pt-7 text-center'>Contact me</h2>
-            <div className='text-xl mt-4 flex'>
-                <p className='text-start ml-[78px]'>Phone: <span className='ml-3'>0969 565 0962</span> </p>
-                <p className='text-start ml-[88px]'>Email: <span className='ml-3'>pilarjoeffrey@gmail.com</span></p>
-            </div>
+      <div className='h-[30f0px] w-[60%] text-white flex flex-col items-center'>
+        <h2 className='text-3xl pt-7 text-center max-md:text-[26px]'>Contact me</h2>
 
-        <div className='flex mt-4 gap-10'>
+        <div className='flex w-full my-2'>
+          <p className='text-center contrast-75 leading-relaxed font-sourceSans max-md:text-[16px]'>
+            I'd love to hear from you! If you have any questions, feedback, or ideas, please don’t hesitate to reach out. Send me an email at 
+              <a href='mailto:pilarjoeffrey@gmail.com' target='_blank' rel='noopener noreferrer'
+                className='mx-1 underline text-xl contrast-200 max-md:text-[18px]'>
+                pilarjoeffrey@gmail.com
+              </a>
+            or call me at 0969 565 0962 and let’s start a conversation!
+          </p>
+        </div>
 
-
+        <div className='flex mt-3 mb-2 gap-10'>
           {icons.map((item, index) => (
-          <a href={item.link} key={index} target="_blank" rel="noopener noreferrer"
-             className='text-2xl border-[1px] border-gray-300 rounded-full p-3
-                        hover:cursor-pointer hover:bg-white hover:bg-opacity-10'>
-            {item.icon}
-          </a>))}
+            <a href={item.link} key={index} target="_blank" rel="noopener noreferrer"
+              className='text-2xl border-[1px] border-gray-300 rounded-full p-3
+                          hover:cursor-pointer hover:bg-white hover:bg-opacity-10'>
+              {item.icon}
+            </a>))}
 
         </div>
-        
-        <div className='mt-10 flex'>
+      
+        <div className='my-10 flex'>
           <p className='text-[15px] mt-[5px] mr-1'><LuCopyright /></p>
           <p>Joeffrey Pilar</p> 
         </div>
 
-        </div>
-
-
+      </div>
     </>
   )
 }

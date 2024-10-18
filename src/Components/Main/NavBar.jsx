@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { TiThMenuOutline } from "react-icons/ti";
+import menuDots from '/assets/menuDots.svg'
 
 export default function NavBar() {
   const navItems = [
@@ -33,12 +34,12 @@ export default function NavBar() {
                       bg-gray-100`}>
             <ul className={`${isFixed ? 'gap-24 py-2 transition-g duration-300 ease-out max-lg:gap-20'
                         : 'gap-36 py-5 transition-g duration-300 ease-out max-lg:gap-24' } 
-                        flex justify-center max-md:transition-none`}>
+                            flex justify-center max-md:transition-none`}>
                           
                 {navItems.map((item, index) =>
                       <li className={`${isFixed ? 'text-xl max-lg:text-[18px]' : 'text-2xl max-lg:text-[22px]'} p-2 
                           hover:cursor-pointer hover:bg-white hover:rounded
-                          max-lg:text-blue-500 max-md:hidden`} key={index}>
+                          max-md:hidden`} key={index}>
                         <AnchorLink href={`${item.id}`}>
                           {item.label}
                         </AnchorLink>
@@ -48,9 +49,10 @@ export default function NavBar() {
 
                 {/* Dropdown */}
                 <div className='relative hidden max-md:block text-center group'>
-                <TiThMenuOutline className='text-4xl hover:cursor-pointer mb-1'/>
-                  <ul className='hidden group-hover:block absolute left-[-55px] mt-[-2px] bg-white rounded shadow-lg w-[150px]
-                                transition-block duration-200 ease-in'>
+                <img src={menuDots} alt='Menu Dropdown' 
+                     className={`${isFixed ? 'w-14 h-14 mt-[-5px]' : 'w-16 h-16'}`}/>
+                  <ul className='hidden group-hover:block absolute left-[-42px] mt-[2px] bg-white rounded shadow-lg w-[150px]
+                                 transition-all duration-900 ease-in'>
                     {navItems.map((item, index) => (
                       <li key={index} className="px-4 py-2 hover:bg-gray-100">
                         <AnchorLink href={`${item.id}`}>
@@ -60,7 +62,6 @@ export default function NavBar() {
                     ))}
                   </ul>
                 </div>
-
             </ul>
         </nav>
     </>

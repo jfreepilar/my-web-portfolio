@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily : {
+        'sourceSans' : 'Source Sans Pro, sans-serif'
+      },
       colors: {
         deepBlue : '#0E2442',
         tomato: '#ff6347',
